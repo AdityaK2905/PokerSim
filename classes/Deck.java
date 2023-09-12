@@ -39,8 +39,19 @@ public class Deck {
         return size;
     }
 
+    public Card get(int i) {
+        return deck.get(i);
+    }
+
+    public void add(Card card) {
+        deck.add(card);
+    }
+
+    public void remove(int i) {
+        deck.remove(i);
+    }
     public void printDeck() {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < deck.size(); i++) {
             System.out.println(deck.get(i));
         }
     }

@@ -21,6 +21,17 @@ public class Card {
 
     @Override
     public String toString() {
-        return ""+rank+" of " + suit;
+        switch (rank) {
+            case 11:
+                return "Jack of " + suit;
+            case 12:
+                return "Queen of " + suit;
+            case 13:
+                return "King of " + suit;
+            case 1:
+                return "Ace of " + suit;
+            default:
+                return ""+rank+" of " + suit;
+        }
     }
 }
