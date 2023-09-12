@@ -36,7 +36,7 @@ public class Deck {
     }
 
     public int getSize() {
-        return size;
+        return deck.size();
     }
 
     public Card get(int i) {

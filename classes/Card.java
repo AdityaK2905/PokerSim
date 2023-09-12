@@ -1,6 +1,6 @@
 package classes;
 
-public class Card {
+public class Card implements Comparable<Card> {
     private final int rank;
     private final String suit;
     private boolean shortened;
@@ -33,5 +33,15 @@ public class Card {
             default:
                 return ""+rank+" of " + suit;
         }
+    }
+
+    @Override
+    public int compareTo(Card card) {
+        if (card.rank > rank) {
+            return -1;
+        } else if (rank > card.rank) {
+            return 1;
+        }
+        return 0;
     }
 }
