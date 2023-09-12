@@ -6,9 +6,9 @@ public class Dealer {
     private int pot;
     private Deck deck;
     private int playerCount;
-    private ArrayList<Card> flopPile = new ArrayList<Card>();
-    private ArrayList<Card> playerHand = new ArrayList<Card>();
-    private ArrayList<Card> otherHands = new ArrayList<Card>();
+    public ArrayList<Card> flopPile = new ArrayList<Card>();
+    public ArrayList<Card> playerHand = new ArrayList<Card>();
+    public ArrayList<Card> otherHands = new ArrayList<Card>();
 
     public Dealer(int players) {
         //Variable Assignment
