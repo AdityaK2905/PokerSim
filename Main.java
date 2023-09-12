@@ -7,7 +7,10 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        ArrayList<Card> deck = new ArrayList<Card>();
-        deck.add(new Card(3, "h"));
+        Deck deck = new Deck(false);
+        deck.printDeck();
+        deck.shuffleDeck();
+        deck.printDeck();
+        System.out.println(deck.getSize());
     }
 }
