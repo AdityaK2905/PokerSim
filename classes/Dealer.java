@@ -20,18 +20,21 @@ public class Dealer {
 
         //Game Creation
         startDeal();
-        System.out.println("Your Hand");
-        printPlayerHand();
+        
+        
 
-        for (int i = 0; i < playerCount; i++) {
-            otherHands.add(deck.get(0));
-            deck.remove(0);
-            otherHands.add(deck.get(0));
-            deck.remove(0);
-        }
+        // for (int i = 0; i < playerCount; i++) {
+        //     otherHands.add(deck.get(0));
+        //     deck.remove(0);
+        //     otherHands.add(deck.get(0));
+        //     deck.remove(0);
+        // }
 
         System.out.println("There are "+playerCount+" other players");
         System.out.println("There are " + deck.getSize() + " cards in the deck remaining");
+        System.out.println("Your Hand:");
+        printPlayerHand();
+        System.out.println("River:");
     }
 
     public int getPot() {
@@ -52,6 +55,11 @@ public class Dealer {
         }
         for (int i = 0; i < 2; i++) {
             playerHand.add(deck.get(0));
+            deck.remove(0);
+        }
+        for (int i = 0; i < 2 * playerCount; i++) {
+            //System.out.println("OppDeal"+deck.get(0));
+            otherHands.add(deck.get(0));
             deck.remove(0);
         }
     }
